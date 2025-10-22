@@ -67,3 +67,27 @@ h2{font-size:28px;margin:0 0 12px}
 .site-footer{padding:40px 0;color:var(--muted)}
 .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace}
 .big{font-size:20px}
+/* ===== Form: nền xám nhạt & placeholder in nghiêng ===== */
+.contact input,
+.contact textarea{
+  background: #2d3447;           /* xám nhạt hơn nền tối */
+  border: 1px solid rgba(255,255,255,.16);
+  color: #e6e9f2;
+  border-radius: 12px;
+}
+
+/* Khi ở giao diện sáng (light mode) */
+.light .contact input,
+.light .contact textarea{
+  background: #eef2f8;           /* xám nhạt cho nền sáng */
+  border: 1px solid #d2d9e8;
+  color: #101322;
+}
+
+/* Placeholder in nghiêng */
+.contact input::placeholder,
+.contact textarea::placeholder{
+  font-style: italic;
+  color: #9aa4bf;                /* xám nhạt hơn chữ chính */
+  opacity: 1;
+}
