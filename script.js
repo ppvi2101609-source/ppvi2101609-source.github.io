@@ -46,18 +46,38 @@
   }
 
   // Nút “Gửi email” (bản liên hệ rút gọn)
-  const emailBtn = document.getElementById("openGmailBtn");
-  if (emailBtn) {
-    emailBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      if (!YOUR_EMAIL || !YOUR_EMAIL.includes("@")) {
-        alert("Bạn chưa đặt email của mình trong script.js (biến YOUR_EMAIL).");
-        return;
-      }
-      openGmail(YOUR_EMAIL, "Liên hệ từ website", "");
-    });
-  }
+const emailBtn = document.getElementById("openGmailBtn");
+if (emailBtn) {
+  emailBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (!YOUR_EMAIL || !YOUR_EMAIL.includes("@")) {
+      alert("Bạn chưa đặt email của mình trong script.js (biến YOUR_EMAIL).");
+      return;
+    }
 
+    const gmailUrl =
+      `https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${
+        encodeURIComponent(YOUR_EMAIL)
+      }&su=${encodeURIComponent("Liên hệ từ website")}&body=${encodeURIComponent("")}`;
+
+    // Hàm mở Gmail (tab mới). Nếu muốn mở ngay trong tab hiện tại, thay window.open(...) bằng: window.location.href = gmailUrl;
+    const go = () => window.open(gmailUrl, "_blank", "noopener");
+
+    // 1) Copy email -> 2) mở Gmail
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(YOUR_EMAIL).then(go).catch(go);
+    } else {
+      // Fallback cho trình duyệt cũ
+      const t = document.createElement("input");
+      t.value = YOUR_EMAIL;
+      document.body.appendChild(t);
+      t.select();
+      try { document.execCommand("copy"); } catch(e) {}
+      document.body.removeChild(t);
+      go();
+    }
+  });
+}
   // ===== Tương thích layout cũ: nếu vẫn còn form thì cũng mở Gmail =====
   const form = document.getElementById("contactForm");
   if (form) {
