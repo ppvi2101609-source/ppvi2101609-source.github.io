@@ -127,3 +127,5 @@ h2{font-size:28px;margin:0 0 12px}
   border-color:rgba(15,98,254,.28);
   color:#0f62fe;
 }
+/* Liên hệ: bản rút gọn 1 cột */
+.contact.onecol{ grid-template-columns: 1fr; }
