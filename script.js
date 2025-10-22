@@ -1,6 +1,7 @@
-// script.js — i18n VI/EN + Gmail + copy email + dark/light
-(function () {
-  /* ================== I18N (VI/EN) ================== */
+// script.js — VI/EN + Dark/Light + Gmail + copy email (đợi DOMContentLoaded)
+window.addEventListener("DOMContentLoaded", function () {
+
+  /* ============ I18N ============ */
   const I18N = {
     vi: {
       navAbout: "Về tôi",
@@ -51,7 +52,6 @@
       btnEmailText: "Gửi email",
       emailLabel: "Địa chỉ email của Vĩ:",
       btnEmailSubject: "Liên hệ từ website",
-
       langBtn: "VI",
     },
 
@@ -104,7 +104,6 @@
       btnEmailText: "Email me",
       emailLabel: "My email:",
       btnEmailSubject: "Contact from website",
-
       langBtn: "EN",
     },
   };
@@ -135,28 +134,16 @@
     try { localStorage.setItem("lang", lang); } catch(e) {}
   }
 
-  let currentLang = (typeof localStorage !== "undefined" && localStorage.getItem("lang")) || "vi";
-  applyLang(currentLang);
-
-  /* ================== Theme ================== */
+  /* ============ Theme ============ */
   const root = document.documentElement;
-  const modeBtn = document.getElementById("modeBtn");
   function setMode(m){
     if (m === "light") root.classList.add("light");
     else root.classList.remove("light");
     try { localStorage.setItem("mode", m); } catch(e) {}
   }
-  const savedMode = (typeof localStorage !== "undefined") ? localStorage.getItem("mode") : null;
-  if (savedMode) setMode(savedMode);
-  if (modeBtn){
-    modeBtn.addEventListener("click", ()=>{
-      const next = root.classList.contains("light") ? "dark" : "light";
-      setMode(next);
-    });
-  }
 
-  /* ================== Your info ================== */
-  const YOUR_EMAIL = "phamphuvi9@gmail.com";                 // ← đổi nếu cần
+  /* ============ Your info ============ */
+  const YOUR_EMAIL = "phamphuvi9@gmail.com";                  // ← đổi nếu cần
   const YOUR_FACEBOOK = "https://www.facebook.com/PhamVi1209"; // ← đổi nếu cần
 
   ["fbLink","fbLink2"].forEach(id=>{
@@ -166,7 +153,7 @@
   const yourEmailSpan = document.getElementById("yourEmail");
   if (yourEmailSpan && YOUR_EMAIL) yourEmailSpan.textContent = YOUR_EMAIL;
 
-  /* ================== Gmail compose ================== */
+  /* ============ Gmail compose ============ */
   function openGmail(to, subject, body){
     const url =
       `https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${encodeURIComponent(to)}&su=${encodeURIComponent(subject||"")}&body=${encodeURIComponent(body||"")}`;
@@ -180,6 +167,30 @@
     }
   }
 
+  /* ============ Attach events (sau khi DOM đã sẵn sàng) ============ */
+  // 1) Ngôn ngữ
+  let currentLang = (typeof localStorage !== "undefined" && localStorage.getItem("lang")) || "vi";
+  applyLang(currentLang);
+  const langBtn = document.getElementById("langBtn");
+  if (langBtn){
+    langBtn.addEventListener("click", ()=>{
+      currentLang = (currentLang === "vi") ? "en" : "vi";
+      applyLang(currentLang);
+    });
+  }
+
+  // 2) Sáng/Tối
+  const savedMode = (typeof localStorage !== "undefined") ? localStorage.getItem("mode") : null;
+  if (savedMode) setMode(savedMode);
+  const modeBtn = document.getElementById("modeBtn");
+  if (modeBtn){
+    modeBtn.addEventListener("click", ()=>{
+      const next = root.classList.contains("light") ? "dark" : "light";
+      setMode(next);
+    });
+  }
+
+  // 3) Nút Gửi email
   const emailBtn = document.getElementById("openGmailBtn");
   if (emailBtn){
     emailBtn.addEventListener("click", (e)=>{
@@ -193,16 +204,8 @@
     });
   }
 
-  /* ================== Lang button ================== */
-  const langBtn = document.getElementById("langBtn");
-  if (langBtn){
-    langBtn.addEventListener("click", ()=>{
-      currentLang = (currentLang === "vi") ? "en" : "vi";
-      applyLang(currentLang);
-    });
-  }
-
-  /* ================== Footer year ================== */
+  // 4) Footer year
   const y = document.getElementById("y");
   if (y) y.textContent = new Date().getFullYear();
-})();
+
+}); // DOMContentLoaded
