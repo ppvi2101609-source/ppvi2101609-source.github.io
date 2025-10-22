@@ -18,7 +18,7 @@
   }
 
   // === ĐiỀN THÔNG TIN CỦA BẠN TẠI ĐÂY ===
-  const YOUR_EMAIL = "<phamphuvi9@gmail.com>"; // ← ĐỔI THÀNH EMAIL CỦA BẠN (nếu dùng mailto)
+  const YOUR_EMAIL = "phamphuvi9@gmail.com"; // ← ĐỔI THÀNH EMAIL CỦA BẠN (nếu dùng mailto)
   const YOUR_FACEBOOK = "https://www.facebook.com/PhamVi1209"; // ← Dán link Facebook vào đây, ví dụ: https://facebook.com/ten.cua.ban
   // =======================================
 
