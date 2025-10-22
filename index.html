@@ -129,48 +129,28 @@
     </section>
 
     <!-- ===== CONTACT ===== -->
-    <section id="contact" class="wrap section">
-      <h2>Liên hệ</h2>
-      <div class="contact">
-        <div class="card">
-          <p class="muted">Gọi nhanh qua số điện thoại/Zalo:</p>
-          <p class="big"><a class="btn" href="tel:0984810120">📞 0984810120</a></p>
-          <p class="muted small">Facebook: <a id="fbLink2" href="#" rel="me">[thêm đường link Facebook sau]</a></p>
-        </div>
+   <section id="contact" class="wrap section">
+  <h2>Liên hệ</h2>
 
-        <div class="card">
-          <p class="muted">Hoặc gửi nội dung qua email :</p>
-          <form id="contactForm">
-            <div class="field">
-              <label for="name">Họ và tên</label>
-              <input id="name" name="name" placeholder="Tên người gửi" required />
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="email người gửi" required />
-            </div>
-            <div class="field full">
-              <label for="message">Nội dung</label>
-              <textarea id="message" name="message" placeholder="Lời nhắn..." required></textarea>
-            </div>
-            <div class="row">
-              <button class="btn" type="submit">Gửi email</button>
-              <a class="btn ghost" id="copyBtn" href="#" role="button">Sao chép địa chỉ email</a>
-            </div>
-            <p class="muted small">
-              Địa chỉ email của Vĩ: <span class="mono" id="yourEmail"></span>
-            </p>
-          </form>
-        </div>
+  <div class="contact onecol">
+    <div class="card">
+      <p class="muted">Bạn có thể gọi hoặc gửi email cho mình:</p>
+
+      <div class="row" style="gap:12px; flex-wrap:wrap">
+        <a class="btn" href="tel:0984810120">📞 0984810120</a>
+        <a class="btn" id="openGmailBtn" href="#">✉️ Gửi email</a>
       </div>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      © <span id="y"></span> · Phạm Phú Vĩ.
+      <p class="muted small" style="margin-top:10px">
+        Facebook: <a id="fbLink2" href="#" rel="me">[thêm đường link Facebook sau]</a>
+      </p>
+      <p class="muted small">
+        Địa chỉ email của Vĩ: <span class="mono" id="yourEmail"></span>
+      </p>
     </div>
-  </footer>
+  </div>
+</section>
+
 
   <script src="script.js" defer></script>
 </body>
