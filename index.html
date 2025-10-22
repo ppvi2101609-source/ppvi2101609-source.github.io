@@ -10,23 +10,21 @@
   <meta property="og:description" content="Sinh viên Đại học Công Nghệ - Kỹ Thuật Cần Thơ · Liên hệ: 0984810120." />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="style.css" />
-  <!-- (tuỳ chọn) favicon:
-  <link rel="icon" href="img/avatar.jpg"> -->
 </head>
 <body>
   <!-- ===== Header / Navbar ===== -->
   <header class="site-header">
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="Trang chủ">
-        <!-- Thay ⚡ bằng <img class="brand-icon" src="img/logo-face.jpg" alt="Logo"> nếu muốn -->
         <div class="badge" aria-hidden="true">⚡</div>
         <span>Phạm Phú Vĩ</span>
       </a>
       <nav class="links" aria-label="Điều hướng">
-        <a href="#about">Về tôi</a>
-        <a href="#projects">Dự án</a>
-        <a href="#skills">Kỹ năng</a>
-        <a href="#contact">Liên hệ</a>
+        <a id="navAbout" href="#about">Về tôi</a>
+        <a id="navProjects" href="#projects">Dự án</a>
+        <a id="navSkills" href="#skills">Kỹ năng</a>
+        <a id="navContact" href="#contact">Liên hệ</a>
+        <button id="langBtn" class="btn ghost" title="Ngôn ngữ">VI</button>
         <button id="modeBtn" class="btn ghost" title="Đổi giao diện">🌓</button>
       </nav>
     </div>
@@ -38,14 +36,15 @@
       <div class="wrap hero-grid">
         <!-- Cột trái -->
         <div>
-          <p class="kicker">Portfolio cá nhân</p>
-          <!-- Không xuống dòng ở tên: dùng khoảng trắng không ngắt -->
-          <h1>Xin chào, tôi là <u>Phạm&nbsp;Phú&nbsp;Vĩ</u></h1>
-          <p class="lead">Sinh viên Đại học Công Nghệ - Kỹ Thuật Cần Thơ. Đang học ngành Công nghệ kỹ thuật năng lượng. Rất thích và quan tâm đến điện, điện tử, IoT, năng lượng, và các dự án thực tiễn.</p>
+          <p id="kicker" class="kicker">Portfolio cá nhân</p>
+          <h1><span id="heroHelloPrefix">Xin chào, tôi là</span> <u>Phạm&nbsp;Phú&nbsp;Vĩ</u></h1>
+          <p id="heroLead" class="lead">
+            Sinh viên Đại học Công Nghệ - Kỹ Thuật Cần Thơ. Quan tâm đến Tự động hoá, IoT, năng lượng, và các dự án thực tiễn.
+          </p>
           <div class="cta">
-            <a class="btn" href="#projects">Xem dự án</a>
-            <a class="btn" href="#contact">Liên hệ nhanh</a>
-            <a class="btn" href="cv/PhamPhuVi-CV.pdf" target="_blank" rel="noopener">Xem CV</a>
+            <a id="ctaProjects" class="btn" href="#projects">Xem dự án</a>
+            <a id="ctaContact" class="btn" href="#contact">Liên hệ nhanh</a>
+            <a id="ctaCV" class="btn" href="cv/PhamPhuVi-CV.pdf" target="_blank" rel="noopener">Xem CV</a>
           </div>
         </div>
         <!-- Cột phải -->
@@ -54,15 +53,15 @@
           <figure class="card" style="padding:12px; text-align:center">
             <img src="img/avatar.jpg" alt="Ảnh Phạm Phú Vĩ"
                  style="width:100%; max-width:280px; aspect-ratio:1/1; object-fit:cover; border-radius:16px; display:block; margin:8px auto;">
-            <figcaption class="muted small"></figcaption>
+            <figcaption class="muted small">Ảnh cá nhân (đổi file <code>img/avatar.jpg</code> nếu cần)</figcaption>
           </figure>
           <!-- Thông tin nhanh -->
           <div class="hero-card" aria-label="Thông tin nhanh">
             <ul>
-              <li>🎓 Trường: Đại học Công Nghệ - Kỹ Thuật Cần Thơ</li>
-              <li>📞 Điện thoại: <a class="mono" href="tel:0984810120">0984810120</a></li>
-              <li>📘 Facebook: <a id="fbLink" href="#" rel="me">https://www.facebook.com/PhamVi1209</a></li>
-              <li>📄 CV: <a href="cv/PhamPhuVi-CV.pdf" target="_blank" rel="noopener">Bấm để xem CV </a></li>
+              <li>🎓 <span id="labelSchool">Trường:</span> Đại học Công Nghệ - Kỹ Thuật Cần Thơ</li>
+              <li>📞 <span id="labelPhone">Điện thoại:</span> <a class="mono" href="tel:0984810120">0984810120</a></li>
+              <li>📘 <span id="labelFacebook">Facebook:</span> <a id="fbLink" href="#" rel="me">[thêm đường link Facebook sau]</a></li>
+              <li>📄 <span id="labelCV">CV:</span> <a id="labelCVLink" href="cv/PhamPhuVi-CV.pdf" target="_blank" rel="noopener">Bấm để xem CV</a></li>
             </ul>
           </div>
         </div>
@@ -71,8 +70,8 @@
 
     <!-- ===== ABOUT ===== -->
     <section id="about" class="wrap section">
-      <h2>Về tôi</h2>
-      <p class="muted">
+      <h2 id="titleAbout">Về tôi</h2>
+      <p id="aboutText" class="muted">
         Tôi hiện là sinh viên năm cuối của Đại học Công Nghệ – Kỹ Thuật Cần Thơ, đam mê công nghệ và kỹ thuật.
         Đây là trang tổng hợp quá trình học tập, kinh nghiệm dự án và định hướng phát triển của tôi.
       </p>
@@ -80,46 +79,46 @@
 
     <!-- ===== PROJECTS ===== -->
     <section id="projects" class="wrap section">
-      <h2>Dự án tiêu biểu</h2>
+      <h2 id="titleProjects">Dự án tiêu biểu</h2>
       <div class="cards">
         <article class="card">
           <div class="badge sm">1</div>
-          <h3>Mô hình điều khiển mức nước</h3>
-          <p class="muted">Thiết kế và vận hành mô hình bồn nước: cảm biến mức, điều khiển PID/biến tần, hiển thị trạng thái.</p>
+          <h3 id="p1Title">Mô hình điều khiển mức nước</h3>
+          <p id="p1Text" class="muted">Thiết kế và vận hành mô hình bồn nước: cảm biến mức, điều khiển PID/biến tần, hiển thị trạng thái.</p>
         </article>
         <article class="card">
           <div class="badge sm">2</div>
-          <h3>Giám sát từ xa qua IoT</h3>
-          <p class="muted">Xây dựng dashboard thu thập dữ liệu, cảnh báo và trực quan hoá theo thời gian.</p>
+          <h3 id="p2Title">Giám sát từ xa qua IoT</h3>
+          <p id="p2Text" class="muted">Xây dựng dashboard thu thập dữ liệu, cảnh báo và trực quan hoá theo thời gian.</p>
         </article>
         <article class="card">
           <div class="badge sm">3</div>
-          <h3>Tối ưu hoá hệ PV bằng PVsyst</h3>
-          <p class="muted">Nghiên cứu & mô phỏng để hỗ trợ ra quyết định đầu tư cho hộ gia đình.</p>
+          <h3 id="p3Title">Tối ưu hoá hệ PV bằng PVsyst</h3>
+          <p id="p3Text" class="muted">Nghiên cứu & mô phỏng để hỗ trợ ra quyết định đầu tư cho hộ gia đình.</p>
         </article>
       </div>
     </section>
 
     <!-- ===== SKILLS ===== -->
     <section id="skills" class="wrap section">
-      <h2>Kỹ năng</h2>
+      <h2 id="titleSkills">Kỹ năng</h2>
       <div class="cards skills">
         <div class="card">
-          <h3>Kỹ thuật</h3>
+          <h3 id="skTech">Kỹ thuật</h3>
           <ul class="list">
             <li><span class="dot"></span>Lập trình cơ bản, điện - điện tử</li>
             <li><span class="dot"></span>Thiết kế mô hình thử nghiệm, phân tích kết quả</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Công cụ</h3>
+          <h3 id="skTools">Công cụ</h3>
           <ul class="list">
             <li><span class="dot"></span>Matlab/Simulink (cơ bản), PVsyst, AutoCAD, bộ công cụ văn phòng</li>
             <li><span class="dot"></span>GitHub Pages, Netlify</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Khác</h3>
+          <h3 id="skOther">Khác</h3>
           <ul class="list">
             <li><span class="dot"></span>Làm việc nhóm, trình bày báo cáo</li>
             <li><span class="dot"></span>Quan tâm IoT, tự động hoá, năng lượng</li>
@@ -128,29 +127,35 @@
       </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
-   <section id="contact" class="wrap section">
-  <h2>Liên hệ</h2>
+    <!-- ===== CONTACT (bản rút gọn) ===== -->
+    <section id="contact" class="wrap section">
+      <h2 id="titleContact">Liên hệ</h2>
 
-  <div class="contact onecol">
-    <div class="card">
-      <p class="muted">Bạn có thể gọi hoặc gửi Email cho mình:</p>
+      <div class="contact onecol">
+        <div class="card">
+          <p id="contactHint" class="muted">Bạn có thể gọi hoặc gửi email cho mình:</p>
 
-      <div class="row" style="gap:12px; flex-wrap:wrap">
-        <a class="btn" href="tel:0984810120">📞 0984810120</a>
-        <a class="btn" id="openGmailBtn" href="#">✉️ Gửi email</a>
+          <div class="row" style="gap:12px; flex-wrap:wrap">
+            <a class="btn" href="tel:0984810120">📞 0984810120</a>
+            <a class="btn" id="openGmailBtn" href="#"><span id="btnEmailText">Gửi email</span></a>
+          </div>
+
+          <p class="muted small" style="margin-top:10px">
+            Facebook: <a id="fbLink2" href="#" rel="me">[thêm đường link Facebook sau]</a>
+          </p>
+          <p class="muted small">
+            <span id="emailLabel">Địa chỉ email của Vĩ:</span> <span class="mono" id="yourEmail"></span>
+          </p>
+        </div>
       </div>
+    </section>
+  </main>
 
-      <p class="muted small" style="margin-top:10px">
-        Facebook: <a id="fbLink2" href="#" rel="me">https://www.facebook.com/PhamVi1209</a>
-      </p>
-      <p class="muted small">
-        Địa chỉ email của mình: <span class="mono" id="yourEmail"></span>
-      </p>
+  <footer class="site-footer">
+    <div class="wrap">
+      © <span id="y"></span> · Phạm Phú Vĩ.
     </div>
-  </div>
-</section>
-
+  </footer>
 
   <script src="script.js" defer></script>
 </body>
