@@ -57,7 +57,7 @@ skOtherItem2: "Quan tâm IoT, tự động hoá, năng lượng",
       kicker: "Personal portfolio",
       heroHelloPrefix: "Hi, I'm",
       heroLead:
-        "Student at Can Tho University of Technology and Engineering. Interested in automation, IoT, energy, and hands-on projects.",
+       heroLead: "Student at Can Tho University of Technology and Engineering. Interested in technology, automation, IoT, energy, and hands-on projects.",
       ctaProjects: "View projects",
       ctaContact: "Contact",
       ctaCV: "View CV",
