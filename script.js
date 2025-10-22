@@ -41,6 +41,12 @@
       btnEmailText: "Gửi email",
       emailLabel: "Địa chỉ email của Vĩ:",
       btnEmailSubject: "Liên hệ từ website",
+      skTechItem1: "Lập trình cơ bản, điện - điện tử",
+skTechItem2: "Thiết kế mô hình thử nghiệm, phân tích kết quả",
+skToolsItem1: "Matlab/Simulink (cơ bản), PVsyst, AutoCAD, bộ công cụ văn phòng",
+skToolsItem2: "GitHub Pages, Netlify",
+skOtherItem1: "Làm việc nhóm, trình bày báo cáo",
+skOtherItem2: "Quan tâm IoT, tự động hoá, năng lượng",
       langBtn: "VI",
     },
     en: {
@@ -82,6 +88,12 @@
       btnEmailText: "Email me",
       emailLabel: "My email:",
       btnEmailSubject: "Contact from website",
+      skTechItem1: "Basic programming, electrical & electronics",
+skTechItem2: "Prototype design, result analysis",
+skToolsItem1: "Matlab/Simulink (basic), PVsyst, AutoCAD, office suite",
+skToolsItem2: "GitHub Pages, Netlify",
+skOtherItem1: "Teamwork, presentation",
+skOtherItem2: "Interest in IoT, automation, energy",
       langBtn: "EN",
     },
   };
@@ -95,6 +107,9 @@
     "p1Title","p1Text","p2Title","p2Text","p3Title","p3Text",
     "titleSkills","skTech","skTools","skOther",
     "titleContact","contactHint","btnEmailText","emailLabel",
+    "skTechItem1","skTechItem2",
+"skToolsItem1","skToolsItem2",
+"skOtherItem1","skOtherItem2",
   ];
 
   function setText(id, text){
