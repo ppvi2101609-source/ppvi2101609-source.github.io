@@ -37,13 +37,24 @@
   if (yourEmailSpan && YOUR_EMAIL){
     yourEmailSpan.textContent = YOUR_EMAIL;
   }
-  if (form){
-    form.addEventListener('submit', (e)=>{
-      e.preventDefault();
-      if(!YOUR_EMAIL || YOUR_EMAIL.indexOf('@')===-1){
-        alert('Bạn chưa điền email của mình trong script.js (biến YOUR_EMAIL).');
-        return;
-      }
+ if (form){
+  form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    if(!YOUR_EMAIL || !YOUR_EMAIL.includes('@')){
+      alert('Bạn chưa điền email của mình trong script.js (biến YOUR_EMAIL).');
+      return;
+    }
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    const subject = encodeURIComponent('Liên hệ từ website – ' + name);
+    const body = encodeURIComponent(
+      `Tên: ${name}\nEmail người gửi: ${email}\n\n${message}`
+    );
+    window.location.href = `mailto:${YOUR_EMAIL}?subject=${subject}&body=${body}`;
+  });
+}
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const message = document.getElementById('message').value.trim();
