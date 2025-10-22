@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phạm Phú Vĩ – Portfolio</title>
+  <meta name="description" content="Trang giới thiệu cá nhân của Phạm Phú Vĩ – sinh viên Đại học Công Nghệ - Kỹ Thuật Cần Thơ. Thông tin, kỹ năng, dự án và liên hệ." />
+  <meta name="color-scheme" content="dark light" />
+  <meta property="og:title" content="Phạm Phú Vĩ – Portfolio" />
+  <meta property="og:description" content="Sinh viên Đại học Công Nghệ - Kỹ Thuật Cần Thơ. Liên hệ: 0984810120." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Trang chủ">
+        <div class="badge" aria-hidden="true">⚡</div>
+        <span>Phạm Phú Vĩ</span>
+      </a>
+      <nav class="links" aria-label="Điều hướng">
+        <a href="#about">Về tôi</a>
+        <a href="#projects">Dự án</a>
+        <a href="#skills">Kỹ năng</a>
+        <a href="#contact">Liên hệ</a>
+        <button id="modeBtn" class="btn ghost" title="Đổi giao diện">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker">Portfolio cá nhân</p>
+          <h1>Xin chào, tôi là <u>Phạm Phú Vĩ</u></h1>
+          <p class="lead">Sinh viên Đại học Công Nghệ - Kỹ Thuật Cần Thơ. Quan tâm đến Tự động hoá, IoT, năng lượng, và các dự án thực tiễn.</p>
+          <div class="cta">
+            <a class="btn" href="#projects">Xem dự án</a>
+            <a class="btn ghost" href="#contact">Liên hệ nhanh</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <ul>
+            <li>🎓 Trường: Đại học Công Nghệ - Kỹ Thuật Cần Thơ</li>
+            <li>📞 Điện thoại: <a class="mono" href="tel:0984810120">0984810120</a></li>
+            <li>📘 Facebook: <a id="fbLink" href="#" rel="me">[thêm đường link Facebook sau]</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="wrap section">
+      <h2>Về tôi</h2>
+      <p class="muted">
+        Tôi là sinh viên đam mê kỹ thuật, thích xây dựng các mô hình ứng dụng thực tế. Mục tiêu là phát triển kỹ năng lập trình, điều khiển, tích hợp phần cứng
+        và triển khai các giải pháp tiết kiệm năng lượng. Luôn sẵn sàng học hỏi, cộng tác và tham gia những dự án mới.
+      </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="wrap section">
+      <h2>Dự án tiêu biểu</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="badge sm">Dự án 1</div>
+          <h3>Mô hình điều khiển mức nước</h3>
+          <p class="muted">
+            Thiết kế và vận hành mô hình bồn nước: cảm biến mức, điều khiển PID/biến tần, hiển thị trạng thái. Tập trung vào tính ổn định và an toàn.
+          </p>
+        </article>
+        <article class="card">
+          <div class="badge sm">Dự án 2</div>
+          <h3>Giám sát từ xa qua IoT</h3>
+          <p class="muted">
+            Xây dựng dashboard đơn giản thu thập dữ liệu, cảnh báo và trực quan hoá thông số theo thời gian.
+          </p>
+        </article>
+        <article class="card">
+          <div class="badge sm">Dự án 3</div>
+          <h3>Khảo sát & tối ưu hoá năng lượng</h3>
+          <p class="muted">
+            Nghiên cứu các giải pháp tiết kiệm điện, tối ưu vận hành thiết bị trong phạm vi hộ gia đình/nhóm nhỏ.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="wrap section">
+      <h2>Kỹ năng</h2>
+      <div class="cards skills">
+        <div class="card">
+          <h3>Kỹ thuật</h3>
+          <ul class="list">
+            <li><span class="dot"></span>Lập trình cơ bản, điện - điện tử, điều khiển</li>
+            <li><span class="dot"></span>Thiết kế mô hình thử nghiệm, phân tích kết quả</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Công cụ</h3>
+          <ul class="list">
+            <li><span class="dot"></span>Matlab/Simulink (cơ bản), phần mềm đồ hoạ, văn phòng</li>
+            <li><span class="dot"></span>Các nền tảng web tĩnh (GitHub Pages, Netlify)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Khác</h3>
+          <ul class="list">
+            <li><span class="dot"></span>Tinh thần học hỏi, làm việc nhóm, trình bày báo cáo</li>
+            <li><span class="dot"></span>Quan tâm IoT, tự động hoá, năng lượng</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="wrap section">
+      <h2>Liên hệ</h2>
+      <div class="contact">
+        <div class="card">
+          <p class="muted">Gọi nhanh qua số điện thoại:</p>
+          <p class="big"><a class="btn" href="tel:0984810120">📞 0984810120</a></p>
+          <p class="muted small">Facebook: <a id="fbLink2" href="#" rel="me">[thêm đường link Facebook sau]</a></p>
+        </div>
+        <div class="card">
+          <p class="muted">Hoặc gửi nội dung qua email (mailto – điền địa chỉ ở dưới):</p>
+          <form id="contactForm">
+            <div class="field">
+              <label for="name">Họ và tên</label>
+              <input id="name" name="name" placeholder="Tên người gửi" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="email người gửi" required />
+            </div>
+            <div class="field full">
+              <label for="message">Nội dung</label>
+              <textarea id="message" name="message" placeholder="Lời nhắn..." required></textarea>
+            </div>
+            <div class="row">
+              <button class="btn" type="submit">Gửi email</button>
+              <a class="btn ghost" id="copyBtn" href="#" role="button">Sao chép địa chỉ email</a>
+            </div>
+            <p class="muted small">
+              Địa chỉ email của Vĩ: <span class="mono" id="yourEmail">&lt;điền email của bạn ở script.js&gt;</span>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      © <span id="y"></span> · Phạm Phú Vĩ. Made with ❤️ & GitHub Pages.
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
