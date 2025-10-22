@@ -32,21 +32,38 @@
     <!-- HERO -->
     <section class="hero">
       <div class="wrap hero-grid">
+        <!-- Cột trái -->
         <div>
           <p class="kicker">Portfolio cá nhân</p>
-          <h1>Xin chào, tôi là <u>Phạm Phú Vĩ</u></h1>
+          <!-- Giữ tên không xuống dòng: dùng khoảng trắng không ngắt &nbsp; -->
+          <h1>Xin chào, tôi là <u>Phạm&nbsp;Phú&nbsp;Vĩ</u></h1>
           <p class="lead">Sinh viên Đại học Công Nghệ - Kỹ Thuật Cần Thơ. Quan tâm đến Tự động hoá, IoT, năng lượng, và các dự án thực tiễn.</p>
           <div class="cta">
             <a class="btn" href="#projects">Xem dự án</a>
             <a class="btn ghost" href="#contact">Liên hệ nhanh</a>
+            <!-- Nút tải CV -->
+            <a class="btn" href="cv/PhamPhuVi-CV.pdf" target="_blank" rel="noopener">Tải CV (PDF)</a>
           </div>
         </div>
-        <div class="hero-card" aria-hidden="true">
-          <ul>
-            <li>🎓 Trường: Đại học Công Nghệ - Kỹ Thuật Cần Thơ</li>
-            <li>📞 Điện thoại: <a class="mono" href="tel:0984810120">0984810120</a></li>
-            <li>📘 Facebook: <a id="fbLink" href="#" rel="me">https://www.facebook.com/PhamVi1209</a></li>
-          </ul>
+
+        <!-- Cột phải: Ảnh + thông tin nhanh -->
+        <div>
+          <!-- Ảnh cá nhân -->
+          <figure class="card" style="padding:12px; text-align:center">
+            <img src="img/avatar.jpg" alt="Ảnh Phạm Phú Vĩ" loading="lazy"
+                 style="width:100%; max-width:280px; aspect-ratio:1/1; object-fit:cover; border-radius:16px; display:block; margin:8px auto;">
+            <figcaption class="muted small">Ảnh cá nhân (đổi file <code>img/avatar.jpg</code>)</figcaption>
+          </figure>
+
+          <!-- Thẻ thông tin nhanh -->
+          <div class="hero-card" aria-label="Thông tin nhanh">
+            <ul>
+              <li>🎓 Trường: Đại học Công Nghệ - Kỹ Thuật Cần Thơ</li>
+              <li>📞 Điện thoại: <a class="mono" href="tel:0984810120">0984810120</a></li>
+              <li>📘 Facebook: <a id="fbLink" href="#" rel="me">[thêm đường link Facebook sau]</a></li>
+              <li>📄 CV: <a href="cv/PhamPhuVi-CV.pdf" target="_blank" rel="noopener">Mở CV (PDF)</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -55,7 +72,8 @@
     <section id="about" class="wrap section">
       <h2>Về tôi</h2>
       <p class="muted">
-        Tôi hiện là sinh viên năm cuối của Đại học Công Nghệ – Kỹ Thuật Cần Thơ, có niềm đam mê sâu sắc với lĩnh vực công nghệ và kỹ thuật. Đây là trang thông tin tổng hợp về tôi: quá trình học tập, kinh nghiệm dự án và định hướng phát triển.
+        Tôi hiện là sinh viên năm cuối của Đại học Công Nghệ – Kỹ Thuật Cần Thơ, có niềm đam mê sâu sắc với lĩnh vực công nghệ và kỹ thuật.
+        Đây là trang thông tin tổng hợp về tôi: quá trình học tập, kinh nghiệm dự án và định hướng phát triển.
       </p>
     </section>
 
@@ -64,25 +82,24 @@
       <h2>Dự án tiêu biểu</h2>
       <div class="cards">
         <article class="card">
-          <div class="badge sm"> 1</div>
+          <div class="badge sm">1</div>
           <h3>Mô hình điều khiển mức nước</h3>
           <p class="muted">
             Thiết kế và vận hành mô hình bồn nước: cảm biến mức, điều khiển PID/biến tần, hiển thị trạng thái. Tập trung vào tính ổn định và an toàn.
           </p>
         </article>
         <article class="card">
-          <div class="badge sm"> 2</div>
+          <div class="badge sm">2</div>
           <h3>Giám sát từ xa qua IoT</h3>
           <p class="muted">
             Xây dựng dashboard đơn giản thu thập dữ liệu, cảnh báo và trực quan hoá thông số theo thời gian.
           </p>
         </article>
         <article class="card">
-          <div class="badge sm"> 3</div>
-          <h3>Tính toán xây dựng hệ thống điều hướng tấm pin năng lượng mặt trời, kết hợp phần mầm PVsyst tối ưu hóa bức xạ năng lượng mặt trời. 
-</h3>
+          <div class="badge sm">3</div>
+          <h3>Tính toán xây dựng hệ thống điều hướng tấm pin năng lượng mặt trời, kết hợp phần mềm PVsyst tối ưu hóa bức xạ mặt trời</h3>
           <p class="muted">
-            Đây là bài báo cáo thực tập tốt nghiệp mà tôi đã hoàn thành về nghiên cứu và xây dựng hệ thống năng lượng mặt trời dựa trên phần mềm PVsyst để đưa ra một thông số trực quan nhất cho hệ gia đình trước khi đầu tư một hệ thống pin năng lượng mặt trời
+            Báo cáo thực tập tốt nghiệp: nghiên cứu và xây dựng hệ PV dựa trên PVsyst để hỗ trợ ra quyết định đầu tư cho hộ gia đình.
           </p>
         </article>
       </div>
@@ -97,13 +114,13 @@
           <ul class="list">
             <li><span class="dot"></span>Lập trình cơ bản, điện - điện tử</li>
             <li><span class="dot"></span>Thiết kế mô hình thử nghiệm, phân tích kết quả</li>
-            <li><span class="dot"></span>Đã nhận chứng chỉ anh văn và tin học căn bản>
+            <li><span class="dot"></span>Đã nhận chứng chỉ Anh văn và Tin học căn bản</li>
           </ul>
         </div>
         <div class="card">
           <h3>Công cụ</h3>
           <ul class="list">
-            <li><span class="dot"></span>Matlab/Simulink (cơ bản),PVsyst, AutoCad, phần mềm văn phòng</li>
+            <li><span class="dot"></span>Matlab/Simulink (cơ bản), PVsyst, AutoCAD, phần mềm văn phòng</li>
             <li><span class="dot"></span>Các nền tảng web tĩnh (GitHub Pages, Netlify)</li>
           </ul>
         </div>
@@ -124,7 +141,7 @@
       <div class="contact">
         <div class="card">
           <p class="muted">Gọi nhanh qua số điện thoại hoặc Zalo:</p>
-          <p class="big"><a class="btn" href="tel:0984810120">📞 0984810120 </a></p>
+          <p class="big"><a class="btn" href="tel:0984810120">📞 0984810120</a></p>
           <p class="muted small">Facebook: <a id="fbLink2" href="#" rel="me">[thêm đường link Facebook sau]</a></p>
         </div>
         <div class="card">
@@ -147,7 +164,7 @@
               <a class="btn ghost" id="copyBtn" href="#" role="button">Sao chép địa chỉ email</a>
             </div>
             <p class="muted small">
-              Địa chỉ email của Vĩ: span class="mono" id="yourEmail" &lt;điền email của bạn ở script.js&gt;</span>
+              Địa chỉ email của Vĩ: <span class="mono" id="yourEmail">&lt;điền email của bạn ở script.js&gt;</span>
             </p>
           </form>
         </div>
