@@ -19,9 +19,11 @@
       labelFacebook: "Facebook:",
       labelCV: "CV:",
       labelCVLink: "click để xem CV",
+
       titleAbout: "Về tôi",
       aboutText:
         "Tôi hiện là sinh viên năm cuối của Đại học Công Nghệ – Kỹ Thuật Cần Thơ, đam mê công nghệ và kỹ thuật. Đây là trang tổng hợp quá trình học tập, kinh nghiệm dự án và định hướng phát triển của tôi.",
+
       titleProjects: "Dự án tiêu biểu",
       p1Title: "Mô hình điều khiển mức nước",
       p1Text:
@@ -32,65 +34,78 @@
       p3Title: "Tối ưu hoá hệ PV bằng PVsyst",
       p3Text:
         "Nghiên cứu & mô phỏng để hỗ trợ ra quyết định đầu tư cho hộ gia đình.",
+
       titleSkills: "Kỹ năng",
       skTech: "Kỹ thuật",
       skTools: "Công cụ",
       skOther: "Khác",
+      skTechItem1: "Lập trình cơ bản, điện - điện tử",
+      skTechItem2: "Thiết kế mô hình thử nghiệm, phân tích kết quả",
+      skToolsItem1: "Matlab/Simulink (cơ bản), PVsyst, AutoCAD, bộ công cụ văn phòng",
+      skToolsItem2: "GitHub Pages, Netlify",
+      skOtherItem1: "Làm việc nhóm, trình bày báo cáo",
+      skOtherItem2: "Quan tâm IoT, tự động hoá, năng lượng",
+
       titleContact: "Liên hệ",
       contactHint: "Bạn có thể gọi hoặc gửi email cho mình:",
       btnEmailText: "Gửi email",
       emailLabel: "Địa chỉ email của Vĩ:",
       btnEmailSubject: "Liên hệ từ website",
-      skTechItem1: "Lập trình cơ bản, điện - điện tử",
-skTechItem2: "Thiết kế mô hình thử nghiệm, phân tích kết quả",
-skToolsItem1: "Matlab/Simulink (cơ bản), PVsyst, AutoCAD, bộ công cụ văn phòng",
-skToolsItem2: "GitHub Pages, Netlify",
-skOtherItem1: "Làm việc nhóm, trình bày báo cáo",
-skOtherItem2: "Quan tâm IoT, tự động hoá, năng lượng",
+
       langBtn: "VI",
     },
-   en: {
-  navAbout: "About",
-  navProjects: "Projects",
-  navSkills: "Skills",
-  navContact: "Contact",
-  kicker: "Personal portfolio",
-  heroHelloPrefix: "Hi, I'm",
-  heroLead: "Student at Can Tho University of Technology and Engineering. Interested in technology, automation, IoT, energy, and hands-on projects.",
-  ctaProjects: "View projects",
-  ctaContact: "Contact",
-  ctaCV: "View CV",
-  labelSchool: "University:",
-  labelPhone: "Phone:",
-  labelFacebook: "Facebook:",
-  labelCV: "CV:",
-  labelCVLink: "labelCVLink: "Click to view CV",
-",
-  titleAbout: "About",
-  aboutText: "I'm a final-year student at Can Tho University of Technology and Engineering, passionate about technology and engineering. This page summarizes my study path, project experience, and development goals.",
-  titleProjects: "Featured projects",
-  p1Title: "Water level control model",
-  p1Text: "Designed and operated a tank model: level sensors, PID/inverter control, status display.",
-  p2Title: "Remote monitoring via IoT",
-  p2Text: "Built a simple dashboard to collect data, alert, and visualize in real time.",
-  p3Title: "PV system optimization with PVsyst",
-  p3Text: "Researched & simulated to support household investment decisions.",
-  titleSkills: "Skills",
-  skTech: "Technical",
-  skTools: "Tools",
-  skOther: "Other",
-  titleContact: "Contact",
-  contactHint: "You can call or email me:",
-  btnEmailText: "Email me",
-  emailLabel: "My email:",
-  btnEmailSubject: "Contact from website",
-  skTechItem1: "Basic programming, electrical & electronics",
-  skTechItem2: "Prototype design, result analysis",
-  skToolsItem1: "Matlab/Simulink (basic), PVsyst, AutoCAD, office suite",
-  skToolsItem2: "GitHub Pages, Netlify",
-  skOtherItem1: "Teamwork, presentation",
-  skOtherItem2: "Interest in IoT, automation, energy",
-  langBtn: "EN",
+
+    en: {
+      navAbout: "About",
+      navProjects: "Projects",
+      navSkills: "Skills",
+      navContact: "Contact",
+      kicker: "Personal portfolio",
+      heroHelloPrefix: "Hi, I'm",
+      heroLead:
+        "Student at Can Tho University of Technology and Engineering. Interested in technology, automation, IoT, energy, and hands-on projects.",
+      ctaProjects: "View projects",
+      ctaContact: "Contact",
+      ctaCV: "View CV",
+      labelSchool: "University:",
+      labelPhone: "Phone:",
+      labelFacebook: "Facebook:",
+      labelCV: "CV:",
+      labelCVLink: "Click to view CV",
+
+      titleAbout: "About",
+      aboutText:
+        "I'm a final-year student at Can Tho University of Technology and Engineering, passionate about technology and engineering. This page summarizes my study path, project experience, and development goals.",
+
+      titleProjects: "Featured projects",
+      p1Title: "Water level control model",
+      p1Text:
+        "Designed and operated a tank model: level sensors, PID/inverter control, status display.",
+      p2Title: "Remote monitoring via IoT",
+      p2Text:
+        "Built a simple dashboard to collect data, alert, and visualize in real time.",
+      p3Title: "PV system optimization with PVsyst",
+      p3Text:
+        "Researched & simulated to support household investment decisions.",
+
+      titleSkills: "Skills",
+      skTech: "Technical",
+      skTools: "Tools",
+      skOther: "Other",
+      skTechItem1: "Basic programming, electrical & electronics",
+      skTechItem2: "Prototype design, result analysis",
+      skToolsItem1: "Matlab/Simulink (basic), PVsyst, AutoCAD, office suite",
+      skToolsItem2: "GitHub Pages, Netlify",
+      skOtherItem1: "Teamwork, presentation",
+      skOtherItem2: "Interest in IoT, automation, energy",
+
+      titleContact: "Contact",
+      contactHint: "You can call or email me:",
+      btnEmailText: "Email me",
+      emailLabel: "My email:",
+      btnEmailSubject: "Contact from website",
+
+      langBtn: "EN",
     },
   };
 
@@ -103,15 +118,12 @@ skOtherItem2: "Quan tâm IoT, tự động hoá, năng lượng",
     "p1Title","p1Text","p2Title","p2Text","p3Title","p3Text",
     "titleSkills","skTech","skTools","skOther",
     "titleContact","contactHint","btnEmailText","emailLabel",
-    "skTechItem1","skTechItem2",
-"skToolsItem1","skToolsItem2",
-"skOtherItem1","skOtherItem2",
+    "skTechItem1","skTechItem2","skToolsItem1","skToolsItem2","skOtherItem1","skOtherItem2",
   ];
 
   function setText(id, text){
     const el = document.getElementById(id);
-    if (!el) return;
-    el.textContent = text;
+    if (el) el.textContent = text;
   }
 
   function applyLang(lang){
