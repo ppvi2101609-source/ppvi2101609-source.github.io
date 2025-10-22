@@ -10,10 +10,10 @@
       kicker: "Portfolio cá nhân",
       heroHelloPrefix: "Xin chào, tôi là",
       heroLead:
-        "Sinh viên Đại học Công Nghệ - Kỹ Thuật Cần Thơ. Quan tâm đến Tự động hoá, IoT, năng lượng, và các dự án thực tiễn.",
+        "Sinh viên trường Đại học Công Nghệ - Kỹ Thuật Cần Thơ. Quan tâm đến công nghệ, tự động hoá, IoT, năng lượng, và các dự án thực tiễn.",
       ctaProjects: "Xem dự án",
       ctaContact: "Liên hệ nhanh",
-      ctaCV: "Xem CV",
+      ctaCV: "click để xem CV",
       labelSchool: "Trường:",
       labelPhone: "Điện thoại:",
       labelFacebook: "Facebook:",
